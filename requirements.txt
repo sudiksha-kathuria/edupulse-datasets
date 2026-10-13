@@ -1,6 +1,24 @@
+# core data + ML
 pandas
 numpy
 scikit-learn
-matplotlib
+xgboost
+scipy
+joblib
+
+# explainability
 shap
+
+# visualisation
+matplotlib
+
+# notebooks
 jupyter
+
+# production pipeline
+fastapi
+uvicorn[standard]
+pydantic
+
+# dashboard
+streamlit
