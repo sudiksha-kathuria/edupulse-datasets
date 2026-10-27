@@ -1,0 +1,108 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 200;
+  padding: 18px 0;
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease), padding 0.25s var(--ease);
+}
+.nav.solid {
+  background: rgba(11,11,11,0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 12px 0;
+  border-bottom-color: var(--line);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  background: none;
+  border: none;
+  font-family: var(--font);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--t1);
+  cursor: pointer;
+  padding: 0;
+}
+.logo span { color: var(--pink); }
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+.links li button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--t3);
+  padding: 6px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color var(--dur) var(--ease);
+}
+.links li button:hover { color: var(--t2); }
+.links li button.on { color: var(--t1); }
+
+.dot {
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background: var(--pink);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  width: 30px;
+  height: 30px;
+}
+.burger span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--t2);
+  border-radius: 1px;
+  transition: transform 0.18s var(--ease), opacity 0.18s var(--ease);
+}
+.burger.x span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.x span:nth-child(2) { opacity: 0; }
+.burger.x span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 640px) {
+  .burger { display: flex; }
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(11,11,11,0.98);
+    border-bottom: 1px solid var(--line);
+    padding: 6px 16px 14px;
+    gap: 1px;
+  }
+  .links.open { display: flex; }
+  .links li button { width: 100%; border-radius: 6px; padding: 10px 12px; }
+}

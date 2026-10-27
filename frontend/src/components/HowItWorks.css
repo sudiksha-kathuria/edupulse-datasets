@@ -1,0 +1,79 @@
+.section {
+  padding: 100px 0;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  font-size: 16px;
+  color: var(--white-dim);
+  max-width: 520px;
+  margin-bottom: 60px;
+}
+
+.hiw-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hiw-step {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  padding: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--black-3);
+  background: var(--black-2);
+  transition: border-color var(--transition), background var(--transition);
+}
+.hiw-step:hover {
+  border-color: var(--pink-border);
+  background: var(--black-3);
+}
+
+.step-num {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--black-4);
+  letter-spacing: -2px;
+  line-height: 1;
+  min-width: 60px;
+  transition: color var(--transition);
+}
+.hiw-step:hover .step-num {
+  color: var(--pink);
+}
+
+.step-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.step-body p {
+  font-size: 15px;
+  color: var(--white-dim);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+@media (max-width: 600px) {
+  .hiw-step { flex-direction: column; gap: 16px; padding: 24px; }
+  .step-num { font-size: 32px; }
+}

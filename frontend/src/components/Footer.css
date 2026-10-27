@@ -1,0 +1,74 @@
+.footer {
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  padding: 56px 0 28px;
+}
+
+.ft-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+
+.ft-logo {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--t1);
+  margin-bottom: 10px;
+}
+.ft-logo span { color: var(--pink); }
+
+.ft-tag {
+  font-size: 13.5px;
+  color: var(--t3);
+  line-height: 1.65;
+  max-width: 280px;
+}
+
+.ft-nt {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-bottom: 14px;
+}
+
+.ft-nav ul, .ft-stack ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ft-nav li button {
+  background: none;
+  border: none;
+  font-family: var(--font);
+  font-size: 13.5px;
+  color: var(--t2);
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--dur) var(--ease);
+}
+.ft-nav li button:hover { color: var(--pink); }
+
+.ft-stack li span { font-size: 13.5px; color: var(--t2); }
+
+.ft-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--t3);
+}
+
+@media (max-width: 680px) {
+  .ft-top { grid-template-columns: 1fr; gap: 28px; }
+  .ft-bottom { flex-direction: column; }
+}
